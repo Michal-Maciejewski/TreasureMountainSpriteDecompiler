@@ -34,6 +34,7 @@
             buttonRight = new Button();
             labelImageList = new Label();
             buttonSaveFile = new Button();
+            checkBoxImage = new CheckBox();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSprite).BeginInit();
             SuspendLayout();
             // 
@@ -95,11 +96,23 @@
             buttonSaveFile.UseVisualStyleBackColor = true;
             buttonSaveFile.Click += buttonSaveFile_Click;
             // 
+            // checkBoxImage
+            // 
+            checkBoxImage.AutoSize = true;
+            checkBoxImage.Location = new Point(1854, 1193);
+            checkBoxImage.Name = "checkBoxImage";
+            checkBoxImage.Size = new Size(192, 29);
+            checkBoxImage.TabIndex = 6;
+            checkBoxImage.Text = "High Quality Image";
+            checkBoxImage.UseVisualStyleBackColor = false;
+            checkBoxImage.CheckStateChanged += checkBoxImage_CheckStateChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(2229, 1307);
+            Controls.Add(checkBoxImage);
             Controls.Add(buttonSaveFile);
             Controls.Add(labelImageList);
             Controls.Add(buttonRight);
@@ -121,5 +134,6 @@
         private Button buttonRight;
         private Label labelImageList;
         private Button buttonSaveFile;
+        private CheckBox checkBoxImage;
     }
 }
