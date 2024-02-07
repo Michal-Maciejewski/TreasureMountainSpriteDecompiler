@@ -35,6 +35,8 @@
             labelImageList = new Label();
             buttonSaveFile = new Button();
             checkBoxImage = new CheckBox();
+            textBoxIndex = new TextBox();
+            labelIndex = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxSprite).BeginInit();
             SuspendLayout();
             // 
@@ -81,7 +83,7 @@
             // labelImageList
             // 
             labelImageList.AutoSize = true;
-            labelImageList.Location = new Point(190, 1099);
+            labelImageList.Location = new Point(166, 1050);
             labelImageList.Name = "labelImageList";
             labelImageList.Size = new Size(0, 25);
             labelImageList.TabIndex = 4;
@@ -107,11 +109,32 @@
             checkBoxImage.UseVisualStyleBackColor = false;
             checkBoxImage.CheckStateChanged += checkBoxImage_CheckStateChanged;
             // 
+            // textBoxIndex
+            // 
+            textBoxIndex.Location = new Point(166, 994);
+            textBoxIndex.Name = "textBoxIndex";
+            textBoxIndex.Size = new Size(150, 31);
+            textBoxIndex.TabIndex = 7;
+            textBoxIndex.Visible = false;
+            textBoxIndex.TextChanged += textBoxIndex_TextChanged;
+            textBoxIndex.KeyPress += textBoxIndex_KeyPress;
+            // 
+            // labelIndex
+            // 
+            labelIndex.AutoSize = true;
+            labelIndex.Location = new Point(322, 994);
+            labelIndex.Name = "labelIndex";
+            labelIndex.Size = new Size(0, 25);
+            labelIndex.TabIndex = 8;
+            labelIndex.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(2229, 1307);
+            Controls.Add(labelIndex);
+            Controls.Add(textBoxIndex);
             Controls.Add(checkBoxImage);
             Controls.Add(buttonSaveFile);
             Controls.Add(labelImageList);
@@ -121,6 +144,7 @@
             Controls.Add(buttonFindFiles);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxSprite).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -135,5 +159,7 @@
         private Label labelImageList;
         private Button buttonSaveFile;
         private CheckBox checkBoxImage;
+        private TextBox textBoxIndex;
+        private Label labelIndex;
     }
 }
